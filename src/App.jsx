@@ -7,11 +7,14 @@ function BlogPosts () {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/posts"); 
+        const response = await fetch(
+          //"https://jsonplaceholder.typicode.com/postsss"// uncomment  this API address to toggle Error response
+         "https://jsonplaceholder.typicode.com/posts"
+        );
 
         if (!response.ok) {
           const errorData = await response.json(); // Try to extract error details
-          throw new Error(errorData.message || "An error occurred");
+          throw new Error(errorData.message || " ");
         }
 
         const data = await response.json();
@@ -24,7 +27,7 @@ function BlogPosts () {
     };
 
     fetchPosts();
-  }, []); 
+  }, []);
 
 
 }
