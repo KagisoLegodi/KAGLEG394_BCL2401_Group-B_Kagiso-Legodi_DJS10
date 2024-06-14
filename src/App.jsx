@@ -32,7 +32,11 @@ function BlogPosts() {
     fetchPosts();
   }, []);
 
+  return (
+    <div>
+      
+    </div>
 
-}
+  );
 
 export default BlogPosts;
