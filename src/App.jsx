@@ -37,7 +37,12 @@ function BlogPosts() {
     <h1 style={{textAlign: "center"}}>Posts</h1>
     {isLoading ? (
       <p>Loading...</p>
-    ) :}
+    ) : error ? (
+      <div style= {{ colour: "black", textAlign: "center"}}>
+        {" "}
+        {error}
+      </div>
+    )}
     </div>
 
   );
