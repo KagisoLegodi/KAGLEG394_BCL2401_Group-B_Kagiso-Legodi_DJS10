@@ -34,7 +34,10 @@ function BlogPosts() {
 
   return (
     <div>
-      
+    <h1 style={{textAlign: "center"}}>Posts</h1>
+    {isLoading ? (
+      <p>Loading...</p>
+    ) :}
     </div>
 
   );
