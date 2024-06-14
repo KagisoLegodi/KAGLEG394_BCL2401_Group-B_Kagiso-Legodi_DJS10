@@ -53,9 +53,15 @@ function BlogPosts() {
       <li
       key={post.id}
       >
-    )}
-    </div>
-
-  );
-
+   <h2>
+{index + 1}. {post.title}
+</h2>
+<p>{post.body}</p>
+</li>
+))}
+</ul>
+)}
+</div>
+);
+}
 export default BlogPosts;
