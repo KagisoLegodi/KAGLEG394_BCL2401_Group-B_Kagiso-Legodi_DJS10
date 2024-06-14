@@ -12,7 +12,7 @@ function BlogPosts() {
       try {
         const response = await fetch(
           //"https://jsonplaceholder.typicode.com/postsss"// uncomment  this API address to toggle Error response
-         "https://jsonplaceholder.typicode.com/posts"
+          "https://jsonplaceholder.typicode.com/posts"
         );
 
         if (!response.ok) {
@@ -34,34 +34,32 @@ function BlogPosts() {
 
   return (
     <div>
-    <h1 style={{textAlign: "center"}}>Posts</h1>
-    {isLoading ? (
-      <p>Loading...</p>
-    ) : error ? (
-      <div style= {{ colour: "black", textAlign: "center"}}>
-        {" "}
-        {error}
-        <img 
-        src={errorImage}
-        alt="Errror"
-        style={{ maxWidth: "100%", height: "auto"}}
-        />
-      </div>
-    ) : (
-      <ul style={{ listStyleType: "none", padding: 0 , textAlign: "center" }}>
-      {posts.map((post, index) => (
-      <li
-      key={post.id}
-      >
-   <h2>
-{index + 1}. {post.title}
-</h2>
-<p>{post.body}</p>
-</li>
-))}
-</ul>
-)}
-</div>
-);
+      <h1 style={{ textAlign: "center" }}>Posts</h1>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <div style={{ colour: "black", textAlign: "center" }}>
+          {" "}
+          {error}
+          <img
+            src={errorImage}
+            alt="Errror"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </div>
+      ) : (
+        <ul style={{ listStyleType: "none", padding: 0, textAlign: "center" }}>
+          {posts.map((post, index) => (
+            <li key={post.id}>
+              <h2>
+                {index + 1}. {post.title}
+              </h2>
+              <p>{post.body}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
 export default BlogPosts;
