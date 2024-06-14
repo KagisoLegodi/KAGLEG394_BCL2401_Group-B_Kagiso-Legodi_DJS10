@@ -41,6 +41,11 @@ function BlogPosts() {
       <div style= {{ colour: "black", textAlign: "center"}}>
         {" "}
         {error}
+        <img 
+        src={errorImage}
+        alt="Errror"
+        style={{ maxWidth: "100%", height: "auto"}}
+        />
       </div>
     )}
     </div>
