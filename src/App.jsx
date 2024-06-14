@@ -47,6 +47,12 @@ function BlogPosts() {
         style={{ maxWidth: "100%", height: "auto"}}
         />
       </div>
+    ) : (
+      <ul style={{ listStyleType: "none", padding: 0 , textAlign: "center" }}>
+      {posts.map((post, index) => (
+      <li
+      key={post.id}
+      >
     )}
     </div>
 
