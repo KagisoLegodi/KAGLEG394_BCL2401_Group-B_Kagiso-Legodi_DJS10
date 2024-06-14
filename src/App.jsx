@@ -1,8 +1,10 @@
 import React, { useState,useEffect } from "react"
 import errorImage from "/images/error-message.png"
 
-function BlogPosts () {
-  const [error, setError] = useState(null)
+function BlogPosts() {
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
