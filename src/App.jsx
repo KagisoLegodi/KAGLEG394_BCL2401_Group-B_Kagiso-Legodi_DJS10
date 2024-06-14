@@ -1,5 +1,6 @@
-import React, { useState,useEffect } from "react"
-import errorImage from "/images/error-message.png"
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from "react";
+import errorImage from "./assets/images/error-message.png";
 
 function BlogPosts() {
   const [posts, setPosts] = useState([]);
